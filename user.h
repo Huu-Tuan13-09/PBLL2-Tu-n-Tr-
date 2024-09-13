@@ -7,7 +7,6 @@ protected:
     static int userId;
     string name;
     string phone;
-    string password;
     string role;
 public:
     User(){};
