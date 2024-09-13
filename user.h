@@ -15,6 +15,7 @@ public:
     User(string name, string phone, string pasword, string role)
     : name(name), phone(phone), password(pasword), role(role) {++userId;}
     string getName(){return name;}
+    string getPhone(){return phone;}
     
 };
     
