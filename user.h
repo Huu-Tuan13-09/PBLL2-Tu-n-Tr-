@@ -6,7 +6,7 @@ class User{
 protected:
     static int userId;
     string name;
-    string phon
+    string phone;
     string role;
 public:
     User(){};
