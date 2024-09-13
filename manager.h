@@ -18,7 +18,7 @@ private:
 public:
     void displayCustomer(){
         for(auto x:customers){
-            cout<<x.userId<<"         "<<x.name<"";
+            cout<<x.userId<<"         "<<x.getName()<<"";
         }
     }
 

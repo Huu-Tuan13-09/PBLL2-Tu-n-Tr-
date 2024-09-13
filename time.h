@@ -1,31 +1,28 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <ctime>
+#include <sstream>
+#include <vector>
+
 using namespace std;
 
 class Time{
-protected:
-    int day, month, year;
-    string time; // h : m 
+private:
+    vector<string> vTime;
 public:
-    Time(){}
-    Time(int d, int m, int y, string t) : day(d), month(m), year(y), time(t) {}
+    void setTime(){
+         // current date/time based on current system
+        time_t now = time(0);
 
-    int getDay(){
-        return day;
+        // convert now to string form
+        char* dt = ctime(&now);
+        string s="";
+        stringstream ss(s);
+        string word;
+        while(ss>>word){
+            vTime.push_back(word);
+        }
     }
-    int getMonth(){
-        return month;
-    }
-    int getYear(){
-        return year;
-    }
-    string getTime(){
-        return time;
-    }
-
-    void display(){
-        cout << year << "/" << month << "/" << day << " " << time;
-    }
-    bool operator == (Time& a){
-        return (time == a.time && day == a.day && month == a.month && year == a.year);
+    vector<string> getTime(){
+        return vTime;
     }
 };
