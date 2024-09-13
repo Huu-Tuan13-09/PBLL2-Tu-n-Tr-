@@ -10,7 +10,11 @@ protected:
     string role;
 public:
     User(){};
-    User(string name, string phone, string pasword, string role)
-    : name(name), phone(phone), password(pasword), role(role) {++userId;}
+    User(string name, string phone, string role)
+    : name(name), phone(phone), role(role) {++userId;}
+    string getName(){ return name; }
+    string getPhone(){ return phone; }
+    string getRole(){return role; }
+    int getUserId(){ return userId; }
 };
 int User::userId=1000;
