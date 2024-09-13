@@ -6,8 +6,7 @@ class User{
 protected:
     static int userId;
     string name;
-    string phone;
-    string password;
+    string phon
     string role;
 public:
     User(){};
