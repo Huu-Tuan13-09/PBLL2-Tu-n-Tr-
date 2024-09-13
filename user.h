@@ -12,5 +12,6 @@ public:
     User(){};
     User(string name, string phone, string pasword, string role)
     : name(name), phone(phone), password(pasword), role(role) {++userId;}
+
 };
 int User::userId=1000;
