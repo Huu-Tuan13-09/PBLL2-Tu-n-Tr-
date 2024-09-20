@@ -48,4 +48,7 @@ public:
     int getExperience(){
         return experience;
     }
+    void check(){
+        cout<<"hello";
+    }
 };
