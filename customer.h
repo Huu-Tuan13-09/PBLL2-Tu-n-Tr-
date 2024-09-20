@@ -9,7 +9,7 @@ private:
     string loyaltyLevel;
     string sex;
     int age;
-public:
+public: 
     Customer(){}
     Customer(string adress, string loyalLevel, string sex, int age) : customerId("C"+to_string(userId)), adress(adress), sex(sex), age(age){}
 

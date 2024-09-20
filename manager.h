@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <ctime>
+#include <vector>
 using namespace std;
 #include "user.h"
 #include "customer.h"
@@ -16,11 +18,14 @@ private:
     string managerID;
 
 public:
+    //Xem danh sach khach hang
     void displayCustomer(){
         for(auto x:customers){
             cout<<x.userId<<"         "<<x.getName()<<"";
         }
     }
+    //
+    
 
 };
 
