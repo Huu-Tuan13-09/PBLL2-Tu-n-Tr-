@@ -8,7 +8,6 @@ using namespace std;
 class Time{
 private:
     vector<string> vTime; // thứ, tháng, ngày, giờ phút giây, năm
-    int s;
 public:
     void setTime(){
          // current date/time based on current system

@@ -10,7 +10,7 @@ private:
 public:
     Barber(){};
 
-    Barber(int ex):experience(ex),barberId("B"+to_string(userId)){};
+    Barber(int ex) : experience(ex), barberId("B"+to_string(userId)){};
     
     void setRole(){
         cout<<"Nhap chuyen mon: ";
@@ -40,11 +40,9 @@ public:
     string getBarberId(){
         return barberId;
     }
-
     vector<string> getRole(){
         return role;
     }
-    
     int getExperience(){
         return experience;
     }

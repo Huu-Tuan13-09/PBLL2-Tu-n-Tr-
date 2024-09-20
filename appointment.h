@@ -16,7 +16,17 @@ private:
     string status;
     Time time;
 public:
-    Appointment(string cusId, string barId, string serId, string st, Time t) : CustomerId(cusId), BarberId(barId), ServiceId(serId), status(st), time(t) {++apId;}
+    Appointment() {++apId;}
+    Appointment(string cusId, string barId, string serId, string st, Time t) 
+    : appointmentId("A" + to_string(apId)), CustomerId(cusId), BarberId(barId), ServiceId(serId), status(st), time(t) {++apId;}
 
+    string getAptId(){return appointmentId;}
+    string getCusId(){return CustomerId;}
+    string getBarId(){return BarberId;}
+    string getSerId(){return ServiceId;}
+    string getStatus(){return status;}
+    Time getTime(){return time;}
+
+    void setStatus(string st){status = st;}
     
 };
