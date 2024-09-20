@@ -21,4 +21,9 @@ public:
     vector<string> getTime(){
         return vTime;
     }
+    string getMonth(){return vTime[1];}
+    string getDay(){return vTime[2];}
+    string getTimeOfDay(){return vTime[3];}
+    string getYear(){return vTime[4];}
+    
 };

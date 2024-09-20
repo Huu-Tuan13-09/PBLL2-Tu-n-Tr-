@@ -66,7 +66,6 @@ public:
         vWorking.erase(it1);
     }
 
-    void 
 
     void setRole(){
         cout<<"Nhập chuyên môn: ";
