@@ -9,8 +9,7 @@ protected:
     string phone;
     string role;
 public:
-    User(){};
-
+    User(){++userId;}
     User(string name, string phone, string role)
     : name(name), phone(phone), role(role) {++userId;}
     string getName(){return name;}
