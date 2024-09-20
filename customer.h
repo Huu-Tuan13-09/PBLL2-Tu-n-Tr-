@@ -22,5 +22,6 @@ public:
     string getAdress(){return adress;}
     int getAge(){return age;}
     string getSex(){return sex;}
+    
 
 };
