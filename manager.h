@@ -1,13 +1,14 @@
 #include <iostream>
 #include <ctime>
 #include <vector>
-using namespace std;
 #include "user.h"
 #include "customer.h"
 #include "service.h"
 #include "appointment.h"
 #include "barber.h"
 #include "time.h"
+
+using namespace std;
 
 class Manager : public User{
 private:
