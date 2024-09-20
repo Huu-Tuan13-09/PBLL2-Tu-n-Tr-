@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string> 
-using namespace std;
 #include "barber.h"
 #include "customer.h"
 #include "time.h"
 #include "service.h"
 
+using namespace std;
 
 class Appointment{
 private:
