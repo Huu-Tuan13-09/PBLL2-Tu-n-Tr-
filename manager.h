@@ -25,7 +25,21 @@ public:
             cout<<x.userId<<"         "<<x.getName()<<"";
         }
     }
-    //
+    //Theo doi lich lam viec
+       
+    //Dieu chinh lich lam viec cua tat ca cac tho
+
+    //Xem bao cao, thong ke dich vu khach hang
+
+    //Cap nhat muc do than thiet cua khach hang
+
+    //xem lich su
+
+    //Dat lich va chon dich vu
+    void booking(){
+
+    }
+    //Huy hoac thay doi lich hen
     
 
 };
