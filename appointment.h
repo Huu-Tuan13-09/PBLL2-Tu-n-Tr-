@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string> 
 using namespace std;
 #include "barber.h"
 #include "customer.h"
@@ -28,5 +29,5 @@ public:
     Time getTime(){return time;}
 
     void setStatus(string st){status = st;}
-    
+
 };

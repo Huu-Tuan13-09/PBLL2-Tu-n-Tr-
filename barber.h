@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <sstream>
+#include <vector>
+#include <string>
 #include "user.h"
 using namespace std;
 
@@ -13,7 +16,7 @@ public:
     Barber(int ex) : experience(ex), barberId("B"+to_string(userId)){};
     
     void setRole(){
-        cout<<"Nhap chuyen mon: ";
+        cout<<"Nhập chuyên môn: ";
         string s;
         cin.ignore();
         getline(cin,s);
@@ -25,7 +28,7 @@ public:
     }
 
     void cancelRole(){
-        cout<<"Nhap chuyen mon can xoa: ";
+        cout<<"Nhập chuyên môn cần xoá: ";
         string s;cin>>s;
         int count =0;
         for(auto x:role){
