@@ -7,7 +7,6 @@ using namespace std;
 class Schedule{
 private:
     string barId;
-    string 
 
 
 };

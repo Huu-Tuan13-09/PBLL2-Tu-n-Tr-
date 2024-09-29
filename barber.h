@@ -21,15 +21,15 @@ public:
     void setWorking(){
         while(true){
             pair<string,vector<string>> w;
-            cout<<"Nhap ngay: ";string day;cin>>day;w.first=day;
-            cout<<"Nhap ca lam viec(cac ca lam ngan cach boi dau phay): ";string ca;cin>>ca;
+            cout<<"Nhập ngày: "; cin>>w.first;
+            cout<<"Nhập ca làm việc(các ca làm ngăn cách bởi dấu phẩy): ";string ca;cin>>ca;
             stringstream ss(ca);
             string tmp; 
             while(getline(ss,tmp,',')){
                 w.second.push_back(tmp);
             }
             vWorking.push_back(w);
-            cout<<"Tiep tuc them ngay? (Y/N)";
+            cout<<"Tiếp tục thêm ngày? (Y/N)";
             char a;cin>>a;
             if(a=='N'||a=='n')break;
         }
@@ -37,12 +37,12 @@ public:
 
     void changeWorking(){
         string changeDay;
-        cout<<"Nhap ngay can thay doi ca lam: ";
+        cout<<"Nhập ngày cần thay đổi ca làm: ";
         cin>>changeDay;
         for(auto x:vWorking){
             if(x.first==changeDay){
                 x.second.clear();
-                cout<<"Nhap ca lam viec(cac ca lam ngan cach boi dau phay): ";string ca;cin>>ca;
+                cout<<"Nhập ca làm việc(các ca làm ngăn cách bởi dấu phẩy): ";string ca;cin>>ca;
                 stringstream ss(ca);
                 string tmp;
                 while(getline(ss,tmp,',')){
@@ -54,7 +54,7 @@ public:
 
     void deleteWorking(){
         string changeDay;
-        cout<<"Nhap ngay can xoa: ";
+        cout<<"Nhập ngày cần xoá: ";
         cin>>changeDay;
         auto it1=vWorking.begin();
         for(auto it=vWorking.begin();it!=vWorking.end();++it){
@@ -65,7 +65,6 @@ public:
         }
         vWorking.erase(it1);
     }
-
 
     void setRole(){
         cout<<"Nhập chuyên môn: ";
@@ -100,5 +99,8 @@ public:
     }
     int getExperience(){
         return experience;
+    }
+    vector<pair<string,vector<string>>> getWorking(){
+        return vWorking;
     }
 };
