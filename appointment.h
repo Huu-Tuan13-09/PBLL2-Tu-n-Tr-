@@ -32,3 +32,4 @@ public:
     void setStatus(string st){status = st;}
 
 };
+int Appointment::apId = 1000;
