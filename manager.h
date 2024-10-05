@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Manager : public User{
+class Manager : public Person{
 private:
     vector<Customer> customers;
     vector<Barber> barbers;
@@ -18,7 +18,7 @@ public:
     //Xem danh sach khach hang
     void displayCustomer(){
         for(auto x:customers){
-            cout<<x.userId<<"         "<<x.getName()<<"";
+            cout<<x.personId<<"         "<<x.getName()<<"";
         }
     }
     //Theo doi lich lam viec

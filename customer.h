@@ -1,8 +1,8 @@
 #include <iostream>
-#include "user.h"
+#include "person.h"
 using namespace std;
 
-class Customer : public User{
+class Customer : public Person{
 private:
     string customerId;
     string adress;
@@ -11,7 +11,7 @@ private:
     int age;
 public: 
     Customer(){}
-    Customer(string name, string phone, string role, string adress, string loyalLevel, string sex, int age) : customerId("C"+to_string(userId)), adress(adress), sex(sex), age(age), User(name, phone, role) {}
+    Customer(string name, string phone, string role, string adress, string loyalLevel, string sex, int age) : customerId("C"+to_string(personId)), adress(adress), sex(sex), age(age), Person(name, phone, role) {}
 
     void setLoyaltyLevel(string level){loyaltyLevel=level;}
     void setAdress(string ad){adress=ad;}

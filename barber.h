@@ -2,12 +2,12 @@
 #include <sstream>
 #include <vector>
 #include <string>
-#include "user.h"
+#include "person.h"
 #include <algorithm>
 
 using namespace std;
 
-class Barber : public User{
+class Barber : public Person{
 private:
     string barberId;
     int experience;
@@ -16,7 +16,7 @@ private:
 public:
     Barber(){};
 
-    Barber(string name, string phone, string role, int ex) : experience(ex), barberId("B"+to_string(userId)), User(name, phone, role) {};
+    Barber(string name, string phone, string role, int ex) : experience(ex), barberId("B"+to_string(personId)), Person(name, phone, role) {};
     
     void setWorking(){
         while(true){

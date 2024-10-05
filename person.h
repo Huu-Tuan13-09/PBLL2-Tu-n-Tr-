@@ -1,22 +1,20 @@
 #include <iostream>
 #include <string>
 using namespace std;
-class User;
-
-class User{
+class Person{
 protected:
-    static int userId;
+    static int personId;
     string name;
     string phone;
     string role;
 public:
-    User(){++userId;}
-    User(string name, string phone, string role)
-    : name(name), phone(phone), role(role) {++userId;}
+    Person(){++personId;}
+    Person(string name, string phone, string role)
+    : name(name), phone(phone), role(role) {++personId;}
     string getName(){return name;}
     string getPhone(){return phone;}
     string getRole(){return role;}
-    int getUserId(){return userId;}
+    int getUserId(){return personId;}
 };
     
-int User::userId=1000;
+int Person::personId=1000;
