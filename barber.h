@@ -16,7 +16,7 @@ private:
 public:
     Barber(){};
 
-    Barber(int ex) : experience(ex), barberId("B"+to_string(userId)){};
+    Barber(string name, string phone, string role, int ex) : experience(ex), barberId("B"+to_string(userId)), User(name, phone, role) {};
     
     void setWorking(){
         while(true){
