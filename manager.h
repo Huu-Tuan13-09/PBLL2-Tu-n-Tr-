@@ -21,6 +21,16 @@ public:
             cout<<x.personId<<"         "<<x.getName()<<"";
         }
     }
+    //Them Barber
+    void addBaber(){
+        char check;
+        do{
+            Barber newBarber;
+            newBarber.setRole();
+            barbers.push_back(newBarber);
+            cout<<"Tiep tuc them ? (Y/N) : ";cin>>check;
+        }while(check=='Y'||check=='y');
+    }
     //Theo doi lich lam viec
     void showSchedule(){
         for(Barber barber : barbers){
@@ -45,6 +55,6 @@ public:
     }
     //Huy hoac thay doi lich hen
     
-
+    
 };
 
