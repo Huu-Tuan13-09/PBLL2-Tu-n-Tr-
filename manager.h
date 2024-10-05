@@ -16,7 +16,6 @@ private:
     vector<Barber> barbers;
     vector<Service> services;
     vector<Appointment> appointments;
-    string managerID;
     string password;
 
 public:
