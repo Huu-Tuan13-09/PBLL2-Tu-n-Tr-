@@ -17,8 +17,10 @@ private:
     vector<Service> services;
     vector<Appointment> appointments;
     string managerID;
+    string password;
 
 public:
+    
     //Xem danh sach khach hang
     void displayCustomer(){
         for(auto x:customers){
