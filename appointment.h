@@ -1,6 +1,3 @@
-#include <iostream>
-#include <string> 
-#include <ctime>
 #include "barber.h"
 #include "customer.h"
 #include "time.h"

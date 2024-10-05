@@ -1,9 +1,4 @@
-#include <iostream>
-#include <ctime>
-#include <vector>
-#include "user.h"
 #include "customer.h"
-#include "service.h"
 #include "appointment.h"
 #include "barber.h"
 #include "time.h"
