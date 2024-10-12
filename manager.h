@@ -19,7 +19,7 @@ public:
     //Xem danh sach khach hang
     void displayCustomer(){
         for(auto x:customers){
-            cout<<x.personId<<"         "<<x.getName()<<"";
+            cout<<x.getCustomerId()<<"         "<<x.getName()<<"\n";
         }
     }
     //Them Barber
