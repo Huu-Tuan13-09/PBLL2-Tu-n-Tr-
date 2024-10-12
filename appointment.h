@@ -15,7 +15,10 @@ private:
     string status;
     Time time;
 public:
-    Appointment() {++apId;}
+    Appointment() {
+        ++apId;
+        appointmentId = "A" + to_string(apId);
+    }
     Appointment(string cusId, string barId, string serId, string st, Time t) 
     : appointmentId("A" + to_string(apId)), CustomerId(cusId), BarberId(barId), ServiceId(serId), status(st), time(t) {++apId;}
 

@@ -18,7 +18,7 @@ public:
     //Xem danh sach khach hang
     void displayCustomer(){
         for(auto x:customers){
-            cout<<x.personId<<"         "<<x.getName()<<"";
+            cout<<x.personId<<"         "<<x.getName()<<"\n";
         }
     }
     //Theo doi lich lam viec
@@ -45,38 +45,54 @@ public:
     }
     //Huy hoac thay doi lich hen
     
-    void cancelCustomer(Customer& cus){
-        for(int i = customers.size() - 1; i >= 0; i--){
-            if(customers[i].getCustomerId() == cus.getCustomerId()){
-                customers.erase(customers.begin() + i);
-                break;
-            }
-        }
+    void cancelCustomer(string Id){
+        int i = findCusId(Id);
+        if(i != -1) customers.erase(customers.begin() + i);
     }
-    void cancelBarber(Barber& bar){
-        for(int i = barbers.size() - 1; i >= 0; i--){
-            if(barbers[i].getBarberId() == bar.getBarberId()){
-                barbers.erase(barbers.begin() + i);
-                break;
-            }
-        }
+    void cancelBarber(string Id){
+        int i = findBarId(Id);
+        barbers.erase(barbers.begin() + i);
     }
-    void cancelService(Service& ser){
-        for(int i = services.size() - 1; i >= 0; i--){
-            if(services[i].getServiceId() == ser.getServiceId()){
-                services.erase(services.begin() + i);
-                break;
-            }
-        }
+    void cancelService(string Id){
+        int i = findSerId(Id);
+        services.erase(services.begin() + i);
     }
-    void cancelAppointment(Appointment& appt){
-        for(int i = appointments.size() - 1; i >= 0; i--){
-            if(appointments[i].getAptId() == appt.getAptId()){
-                appointments.erase(appointments.begin() + i);
-                break;
-            }
-        }
+    void cancelAppointment(string Id){
+        int i = findAptId(Id);
+        appointments.erase(appointments.begin() + i);
     }
 
+    int findCusId(string Id){
+        for(int i = customers.size() - 1; i >= 0; i--){
+            if(customers[i].getCustomerId() == Id){
+                return i;
+            }
+        }
+        return -1;
+    }
+    int findBarId(string Id){
+        for(int i = barbers.size() - 1; i >= 0; i--){
+            if(barbers[i].getBarberId() == Id){
+                return i;
+            }
+        }
+        return -1;
+    }
+    int findSerId(string Id){
+        for(int i = services.size() - 1; i >= 0; i--){
+            if(services[i].getServiceId() == Id){
+                return i;
+            }
+        }
+        return -1;
+    }
+    int findAptId(string Id){
+        for(int i = appointments.size() - 1; i >= 0; i--){
+            if(appointments[i].getAptId() == Id){
+                return i;
+            }
+        }
+        return -1;
+    }
 };
 
