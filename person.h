@@ -17,7 +17,7 @@ public:
     : name(name), phone(phone){++personId;}
     string getName(){return name;}
     string getPhone(){return phone;}
-    int getUserId(){return personId;}
+    int getPersonId(){return personId;}
 };
     
 int Person::personId=1000;
