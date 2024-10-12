@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Manager : public Person{
+class Manager{
 private:
     vector<Customer> customers;
     vector<Barber> barbers;
@@ -13,14 +13,19 @@ private:
     vector<Appointment> appointments;
     string password;
 
+
 public:
     
     //Xem danh sach khach hang
     void displayCustomer(){
         for(auto x:customers){
-            cout<<x.personId<<"         "<<x.getName()<<"";
+            cout<<x.getCustomerId() <<"         "<<x.getName()<<"";
         }
     }
+    int findBaber(){
+
+    }
+
     //Them Barber
     void addBaber(){
         char check;
@@ -30,6 +35,10 @@ public:
             barbers.push_back(newBarber);
             cout<<"Tiep tuc them ? (Y/N) : ";cin>>check;
         }while(check=='Y'||check=='y');
+    }
+    //Xoa baber
+    void deleteBaber(string id){
+
     }
     //Theo doi lich lam viec
     void showSchedule(){
