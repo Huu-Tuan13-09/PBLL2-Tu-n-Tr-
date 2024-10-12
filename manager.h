@@ -18,7 +18,7 @@ public:
     //Xem danh sach khach hang
     void displayCustomer(){
         for(auto x:customers){
-            cout<<x.personId<<"         "<<x.getName()<<"\n";
+            cout<<x.getCustomerId()<<"         "<<x.getName()<<"\n";
         }
     }
     //Theo doi lich lam viec
