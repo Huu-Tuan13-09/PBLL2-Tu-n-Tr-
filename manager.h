@@ -63,7 +63,7 @@ public:
     }
     void cancelService(Service& ser){
         for(int i = services.size() - 1; i >= 0; i--){
-            if(services[i].getService() == ser.getService()){
+            if(services[i].getServiceId() == ser.getServiceId()){
                 services.erase(services.begin() + i);
                 break;
             }
