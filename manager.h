@@ -36,6 +36,10 @@ public:
     //Xem bao cao, thong ke dich vu khach hang
 
     //Cap nhat muc do than thiet cua khach hang
+    void updateLoyaltyLevel(string cusId, string loyaltyLevel){
+        int i = findCusId(cusId);
+        customers[i].setLoyaltyLevel(loyaltyLevel);
+    }
 
     //xem lich su 
 
