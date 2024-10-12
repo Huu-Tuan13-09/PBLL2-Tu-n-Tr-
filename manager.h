@@ -45,6 +45,38 @@ public:
     }
     //Huy hoac thay doi lich hen
     
+    void cancelCustomer(Customer& cus){
+        for(int i = customers.size() - 1; i >= 0; i--){
+            if(customers[i].getCustomerId() == cus.getCustomerId()){
+                customers.erase(customers.begin() + i);
+                break;
+            }
+        }
+    }
+    void cancelBarber(Barber& bar){
+        for(int i = barbers.size() - 1; i >= 0; i--){
+            if(barbers[i].getBarberId() == bar.getBarberId()){
+                barbers.erase(barbers.begin() + i);
+                break;
+            }
+        }
+    }
+    void cancelService(Service& ser){
+        for(int i = services.size() - 1; i >= 0; i--){
+            if(services[i].getService() == ser.getService()){
+                services.erase(services.begin() + i);
+                break;
+            }
+        }
+    }
+    void cancelAppointment(Appointment& appt){
+        for(int i = appointments.size() - 1; i >= 0; i--){
+            if(appointments[i].getAptId() == appt.getAptId()){
+                appointments.erase(appointments.begin() + i);
+                break;
+            }
+        }
+    }
 
 };
 

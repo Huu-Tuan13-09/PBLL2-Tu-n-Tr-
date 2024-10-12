@@ -10,12 +10,15 @@ private:
     string sex;
     int age;
 public: 
-    Customer(){}
+    Customer(){
+        customerId = "C" + to_string(personId);
+    }
     Customer(string name, string phone, string role, string adress, string loyalLevel, string sex, int age) : customerId("C"+to_string(personId)), adress(adress), sex(sex), age(age), Person(name, phone, role) {}
 
     void setLoyaltyLevel(string level){loyaltyLevel=level;}
     void setAdress(string ad){adress=ad;}
     void setAge(int age){this->age=age;}
+    void setSex(string sex){this->sex = sex;}
 
     string getLoyaltyLevel(){return loyaltyLevel;}
     string getCustomerId(){return customerId;}

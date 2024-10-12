@@ -14,7 +14,9 @@ private:
     vector<string> role; 
     vector<pair<string,vector<string>>> vWorking;
 public:
-    Barber(){};
+    Barber(){
+        barberId = "B"+to_string(personId);
+    }
 
     Barber(string name, string phone, string role, int ex) : experience(ex), barberId("B"+to_string(personId)), Person(name, phone, role) {};
     

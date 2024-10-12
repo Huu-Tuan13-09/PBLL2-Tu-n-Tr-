@@ -4,18 +4,22 @@ using namespace std;
 
 class Service{
 private:
-    string ID;
+    static int serId;
+    string serviceId;
     string nameService;
     string price;
     int duration; // tính theo phút
 public:
     Service(){}
-    Service(string id, string ser, string pr, int est) : ID(id), nameService(ser), price(pr), duration(est) {}
-    void display(){
-        cout << ID << ", " << nameService << ", " << price << ", " << duration;
+    Service(string ser, string pr, int est) : nameService(ser), price(pr), duration(est) {
+        serId++;
+        serviceId = "S" + to_string(serId);
     }
-    string getID(){
-        return ID;
+    void display(){
+        cout << serviceId << ", " << nameService << ", " << price << ", " << duration;
+    }
+    string getServiceId(){
+        return serviceId;
     }
     string getService(){
         return nameService;
@@ -27,3 +31,4 @@ public:
         return duration;
     }
 };
+int Service::serId = 1000;
