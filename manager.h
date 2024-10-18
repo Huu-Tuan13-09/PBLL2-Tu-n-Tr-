@@ -22,16 +22,7 @@ public:
             cout<<x.getCustomerId()<<"         "<<x.getName()<<"\n";
         }
     }
-    //Them Barber
-    void addBaber(){
-        char check;
-        do{
-            Barber newBarber;
-            newBarber.setRole();
-            barbers.push_back(newBarber);
-            cout<<"Tiep tuc them ? (Y/N) : ";cin>>check;
-        }while(check=='Y'||check=='y');
-    }
+
     //Theo doi lich lam viec
     void showSchedule(){
         for(Barber barber : barbers){
@@ -47,7 +38,7 @@ public:
     //Xem bao cao, thong ke dich vu khach hang
 
     //Cap nhat muc do than thiet cua khach hang
-    void updateLoyaltyLevel(string cusId, string loyaltyLevel){
+    void updateLoyaltyLevel(string cusId, int loyaltyLevel){
         int i = findCusId(cusId);
         customers[i].setLoyaltyLevel(loyaltyLevel);
     }
@@ -59,6 +50,28 @@ public:
 
     }
     //Huy hoac thay doi lich hen
+
+    //Them Barber
+    void addBaber(){
+        char check;
+        do{
+            Barber newBarber;
+            newBarber.setRole();
+            barbers.push_back(newBarber);
+            cout<<"Tiep tuc them ? (Y/N) : ";cin>>check;
+        }while(check=='Y'||check=='y');
+    }
+    void addCustomer(){
+        char check;
+        do{
+            Customer newCustomer;
+            cout << "Age: "; int age; cin >> age; newCustomer.setAge(age);
+            cout << "Sex: "; string sex; cin >> sex; newCustomer.setSex(sex);
+            cout << "Adress: "; string adress; cin >> adress; newCustomer.setAdress(adress);
+            customers.push_back(newCustomer);
+            cout<<"Tiep tuc them ? (Y/N) : ";cin>>check;
+        }while(check=='Y'||check=='y');
+    }
     
     // Huỷ thành viên từng class theo id
     void cancelCustomer(string Id){
