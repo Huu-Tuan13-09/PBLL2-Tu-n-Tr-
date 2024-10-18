@@ -61,6 +61,7 @@ public:
             cout<<"Tiep tuc them ? (Y/N) : ";cin>>check;
         }while(check=='Y'||check=='y');
     }
+    // Them Customer
     void addCustomer(){
         char check;
         do{
