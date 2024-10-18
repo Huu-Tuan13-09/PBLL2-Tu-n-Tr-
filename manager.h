@@ -32,10 +32,6 @@ public:
             cout<<"Tiep tuc them ? (Y/N) : ";cin>>check;
         }while(check=='Y'||check=='y');
     }
-    //Xoa baber
-    void deleteBaber(string id){
-
-    }
     //Theo doi lich lam viec
     void showSchedule(){
         for(Barber barber : barbers){
@@ -64,6 +60,7 @@ public:
     }
     //Huy hoac thay doi lich hen
     
+    // Huỷ thành viên từng class theo id
     void cancelCustomer(string Id){
         int i = findCusId(Id);
         if(i != -1) customers.erase(customers.begin() + i);
@@ -81,6 +78,7 @@ public:
         appointments.erase(appointments.begin() + i);
     }
 
+    // Tìm kiếm id
     int findCusId(string Id){
         for(int i = customers.size() - 1; i >= 0; i--){
             if(customers[i].getCustomerId() == Id){
