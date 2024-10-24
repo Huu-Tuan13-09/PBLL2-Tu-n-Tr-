@@ -11,7 +11,7 @@ private:
     vector<Barber> barbers;
     vector<Service> services;
     vector<Appointment> appointments;
-    string password;
+    string password = "haha123";
 
 
 public:
@@ -60,7 +60,7 @@ public:
 
     }
 
-    //Huy hoac thay doi lich hen
+    //Thay doi lich hen
 
     //Them Barber
     void addBaber(){
