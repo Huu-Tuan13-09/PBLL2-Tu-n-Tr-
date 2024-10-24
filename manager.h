@@ -15,7 +15,11 @@ private:
 
 
 public:
-    
+    //Tao moi dich vu
+    void createServices(){
+        Service newSer;
+        services.push_back(newSer);
+    }
     //Xem danh sach khach hang
     void displayCustomer(){
         for(auto x:customers){
@@ -47,7 +51,7 @@ public:
 
     //Dat lich va chon dich vu
     void booking(){
-
+        
     }
     //Huy hoac thay doi lich hen
 

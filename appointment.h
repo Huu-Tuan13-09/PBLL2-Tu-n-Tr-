@@ -18,6 +18,7 @@ public:
     Appointment() {
         ++apId;
         appointmentId = "A" + to_string(apId);
+
     }
     Appointment(string cusId, string barId, string serId, string st, Time t) 
     : appointmentId("A" + to_string(apId)), CustomerId(cusId), BarberId(barId), ServiceId(serId), status(st), time(t) {++apId;}
@@ -30,6 +31,7 @@ public:
     Time getTime(){return time;}
 
     void setStatus(string st){status = st;}
+    
 
 };
 int Appointment::apId = 1000;

@@ -7,11 +7,15 @@ private:
     static int serId;
     string serviceId;
     string nameService;
-    string price;
+    double price;
     int duration; // tính theo phút
 public:
     Service(){}
-    Service(string ser, string pr, int est) : nameService(ser), price(pr), duration(est) {
+    Service() {
+        cin>>serId;
+        getline(cin,nameService);
+        cin>>price;
+        cin>>duration;        
         serId++;
         serviceId = "S" + to_string(serId);
     }
@@ -24,7 +28,7 @@ public:
     string getService(){
         return nameService;
     }
-    string getPrice(){
+    double getPrice(){
         return price;
     }
     int getDuration(){
