@@ -9,7 +9,7 @@ class Time{
 private:
     vector<string> vTime; // thứ, tháng, ngày, giờ phút giây, năm
 public:
-    void setTime(){
+    Time(){
         time_t now = time(0); // trả về thời gian hiện tại của hệ thống
         string dt = ctime(&now); // trả về chuỗi thời gian
         stringstream ss(dt);

@@ -5,27 +5,25 @@ using namespace std;
 class Customer : public Person{
 private:
     string customerId;
-    string adress;
     int loyaltyLevel;
     string sex;
     int age;
 public: 
-    Customer(){
+    Customer();
+    Customer(string number) : phone(number){
         customerId = "C" + to_string(personId);
         setLoyaltyLevel();
+        cout<<"Ten khach hang: ";
+        getline(cin,name);
+        cout<<"Gioi tinh: ";
+        cin>>sex;
+        cout<<"Tuoi: ";
+        cin>>age;
     }
-    Customer(string name, string phone, string role, string adress, string loyalLevel, string sex, int age) : customerId("C"+to_string(personId)), adress(adress), sex(sex), age(age), Person(name, phone, role) {}
-
     void setLoyaltyLevel(int level = 1){loyaltyLevel=level;}
-    void setAdress(string ad){adress=ad;}
-    void setAge(int age){this->age=age;}
-    void setSex(string sex){this->sex = sex;}
-
     int getLoyaltyLevel(){return loyaltyLevel;}
     string getCustomerId(){return customerId;}
-    string getAdress(){return adress;}
     int getAge(){return age;}
     string getSex(){return sex;}
     
-
 };

@@ -13,7 +13,7 @@ public:
        getline(cin,name);
        cout<<"Nhap so dien thoai: ";cin>>phone;
     }
-    Person(string name, string phone, string role)
+    Person(string name, string phone)
     : name(name), phone(phone){++personId;}
     string getName(){return name;}
     string getPhone(){return phone;}
