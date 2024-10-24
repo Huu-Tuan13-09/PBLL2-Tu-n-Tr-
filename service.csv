@@ -1,0 +1,10 @@
+Service Name,Price (VND),Duration (Minutes)
+Haircut,100000,30
+Shaving,50000,15
+Beard Trim,70000,20
+Hair Wash,40000,10
+Hair Coloring,200000,60
+Hair Styling,150000,45
+Haircut & Shaving,140000,40
+Haircut & Hair Wash,130000,35
+Hair Coloring & Hair Wash,230000,70

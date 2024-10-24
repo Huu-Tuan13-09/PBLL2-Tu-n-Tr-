@@ -1,0 +1,59 @@
+Booking Time,Appointment Time,Customer Name,Service Name,Barber Name,Status
+2024-09-28 09:00,2024-10-01 10:00,Tran Van P,Haircut,Nguyen Van A,Completed
+2024-09-28 11:00,2024-10-01 12:00,Le Thi Q,Hair Wash,Tran Thi B,Completed
+2024-09-29 13:00,2024-10-02 14:00,Nguyen Van R,Haircut & Shaving,Le Van C,Completed
+2024-09-29 15:00,2024-10-02 16:00,Pham Thi S,Hair Styling,Vu Thi F,Completed
+2024-09-29 17:00,2024-10-02 18:00,Hoang Van T,Shaving,Nguyen Van N,Completed
+2024-09-30 09:00,2024-10-03 10:00,Vu Thi U,Hair Coloring,Pham Thi D,Completed
+2024-09-30 11:00,2024-10-03 12:00,Tran Van V,Haircut & Hair Wash,Hoang Van E,Completed
+2024-09-30 13:00,2024-10-03 14:00,Nguyen Thi W,Beard Trim,Nguyen Van G,Completed
+2024-09-30 15:00,2024-10-03 16:00,Le Van X,Hair Styling,Le Thi J,Completed
+2024-09-30 17:00,2024-10-03 18:00,Pham Van Y,Haircut,Nguyen Van A,Completed
+2024-10-01 09:00,2024-10-04 10:00,Hoang Thi Z,Hair Wash,Vu Thi L,Completed
+2024-10-01 11:00,2024-10-04 12:00,Nguyen Thi AA,Haircut & Hair Coloring,Vu Thi L,Completed
+2024-10-01 13:00,2024-10-04 14:00,Vu Van BB,Haircut & Shaving,Nguyen Van N,Completed
+2024-10-01 15:00,2024-10-04 16:00,Tran Thi CC,Hair Styling,Vu Thi F,Completed
+2024-10-01 17:00,2024-10-04 18:00,Le Van DD,Beard Trim,Le Van O,Completed
+2024-10-02 09:00,2024-10-05 10:00,Nguyen Thi EE,Haircut,Nguyen Van A,Completed
+2024-10-02 11:00,2024-10-05 12:00,Pham Van FF,Shaving,Tran Van H,Completed
+2024-10-02 13:00,2024-10-05 14:00,Tran Thi GG,Haircut & Hair Wash,Hoang Van E,Completed
+2024-10-02 15:00,2024-10-05 16:00,Hoang Van HH,Haircut & Shaving,Nguyen Van G,Completed
+2024-10-02 17:00,2024-10-05 18:00,Le Thi II,Hair Styling,Vu Thi F,Completed
+2024-10-03 09:00,2024-10-06 10:00,Vu Van JJ,Hair Wash,Le Van C,Completed
+2024-10-03 11:00,2024-10-06 12:00,Nguyen Van KK,Haircut,Nguyen Van N,Completed
+2024-10-03 13:00,2024-10-06 14:00,Pham Thi LL,Haircut & Hair Coloring,Vu Thi L,Completed
+2024-10-03 15:00,2024-10-06 16:00,Tran Van MM,Beard Trim,Nguyen Van A,Completed
+2024-10-03 17:00,2024-10-06 18:00,Le Van NN,Haircut & Shaving,Le Van C,Completed
+2024-10-04 09:00,2024-10-07 10:00,Hoang Thi OO,Haircut & Hair Styling,Le Thi J,Completed
+2024-10-04 11:00,2024-10-07 12:00,Vu Thi PP,Hair Coloring,Pham Thi D,Completed
+2024-10-04 13:00,2024-10-07 14:00,Nguyen Van QQ,Hair Wash,Hoang Van E,Completed
+2024-10-04 15:00,2024-10-07 16:00,Tran Thi RR,Hair Styling,Vu Thi F,Completed
+2024-10-04 17:00,2024-10-07 18:00,Pham Van SS,Shaving,Tran Van H,Completed
+2024-10-05 09:00,2024-10-08 10:00,Le Van TT,Beard Trim,Le Van O,Pending
+2024-10-05 11:00,2024-10-08 12:00,Hoang Van UU,Haircut & Hair Wash,Nguyen Van G,Pending
+2024-10-05 13:00,2024-10-08 14:00,Nguyen Thi VV,Hair Coloring & Hair Wash,Pham Thi D,Pending
+2024-10-05 15:00,2024-10-08 16:00,Tran Van WW,Haircut & Shaving,Nguyen Van A,Pending
+2024-10-05 17:00,2024-10-08 18:00,Vu Thi XX,Haircut,Vu Thi L,Pending
+2024-10-06 09:00,2024-10-09 10:00,Pham Thi YY,Haircut & Shaving,Nguyen Van G,Pending
+2024-10-06 11:00,2024-10-09 12:00,Hoang Van ZZ,Hair Wash,Le Van C,Pending
+2024-10-06 13:00,2024-10-09 14:00,Nguyen Van AAA,Haircut,Nguyen Van N,Pending
+2024-10-06 15:00,2024-10-09 16:00,Tran Thi BBB,Haircut & Hair Styling,Le Thi J,Pending
+2024-10-06 17:00,2024-10-09 18:00,Vu Van CCC,Shaving,Tran Van H,Pending
+2024-10-07 09:00,2024-10-10 10:00,Nguyen Thi DDD,Beard Trim,Nguyen Van A,Pending
+2024-10-07 11:00,2024-10-10 12:00,Hoang Van EEE,Haircut & Shaving,Nguyen Van G,Pending
+2024-10-07 13:00,2024-10-10 14:00,Le Thi FFF,Hair Styling,Vu Thi F,Pending
+2024-10-07 15:00,2024-10-10 16:00,Pham Van GGG,Haircut & Hair Coloring,Vu Thi L,Pending
+2024-10-07 17:00,2024-10-10 18:00,Tran Thi HHH,Haircut & Shaving,Le Van O,Pending
+2024-10-08 09:00,2024-10-11 10:00,Nguyen Van III,Shaving,Tran Van H,Pending
+2024-10-08 11:00,2024-10-11 12:00,Vu Thi JJJ,Haircut & Hair Wash,Hoang Van E,Pending
+2024-10-08 13:00,2024-10-11 14:00,Le Van KKK,Haircut & Shaving,Nguyen Van N,Pending
+2024-10-08 17:00,2024-10-11 18:00,Le Thi Q,Hair Wash,Tran Thi B,Pending
+2024-10-09 09:00,2024-10-12 10:00,Nguyen Van R,Haircut & Shaving,Le Van C,Pending
+2024-10-09 11:00,2024-10-12 12:00,Pham Thi S,Hair Styling,Vu Thi F,Pending
+2024-10-09 15:00,2024-10-12 16:00,Vu Thi U,Hair Coloring,Pham Thi D,Pending
+2024-10-10 11:00,2024-10-13 12:00,Le Van X,Hair Styling,Le Thi J,Pending
+2024-10-10 17:00,2024-10-13 18:00,Nguyen Thi AA,Haircut & Hair Coloring,Vu Thi L,Pending
+2024-10-11 09:00,2024-10-14 10:00,Vu Van BB,Haircut & Shaving,Nguyen Van N,Pending
+2024-10-11 17:00,2024-10-14 18:00,Pham Van FF,Shaving,Tran Van H,Pending
+2024-10-12 11:00,2024-10-15 12:00,Hoang Van HH,Haircut & Shaving,Nguyen Van G,Pending
+2024-10-12 13:00,2024-10-15 14:00,Le Thi II,Hair Styling,Vu Thi F,Pending
