@@ -18,17 +18,13 @@ public:
     void display(){
         cout << serviceId << ", " << nameService << ", " << price << ", " << duration;
     }
-    string getServiceId(){
-        return serviceId;
-    }
-    string getService(){
-        return nameService;
-    }
-    string getPrice(){
-        return price;
-    }
-    int getDuration(){
-        return duration;
-    }
+    string getServiceId(){return serviceId;}
+    string getNameService(){return nameService;}
+    string getPrice(){return price;}
+    int getDuration(){return duration;}
+
+    void setNameService(string name){nameService = name;}
+    void setPrice(string price){this->price = price;}
+    void setDuration(int duration){this->duration = duration;}
 };
 int Service::serId = 1000;

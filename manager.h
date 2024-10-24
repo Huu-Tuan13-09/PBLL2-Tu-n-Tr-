@@ -17,7 +17,7 @@ private:
 public:
     
     //Xem danh sach khach hang
-    void displayCustomer(){
+    void displayCustomers(){
         for(auto x:customers){
             cout<<x.getCustomerId()<<"         "<<x.getName()<<"\n";
         }
@@ -37,6 +37,14 @@ public:
     }
     //Xem bao cao, thong ke dich vu khach hang
 
+    //Xem dich vu
+    void displayServices(){
+        for(Service ser : services){
+            cout << ser.getServiceId() << "         " << ser.getNameService() << "         " 
+            << ser.getDuration() << "         " << ser.getPrice() << endl;
+        }
+    }
+
     //Cap nhat muc do than thiet cua khach hang
     void updateLoyaltyLevel(string cusId, int loyaltyLevel){
         int i = findCusId(cusId);
@@ -46,9 +54,12 @@ public:
     //xem lich su 
 
     //Dat lich va chon dich vu
-    void booking(){
+    void booking(string cusId, string BarId){
+        displayServices();
+        Appointment apt;
 
     }
+
     //Huy hoac thay doi lich hen
 
     //Them Barber
@@ -70,6 +81,18 @@ public:
             cout << "Sex: "; string sex; cin >> sex; newCustomer.setSex(sex);
             cout << "Adress: "; string adress; cin >> adress; newCustomer.setAdress(adress);
             customers.push_back(newCustomer);
+            cout<<"Tiep tuc them ? (Y/N) : ";cin>>check;
+        }while(check=='Y'||check=='y');
+    }
+    // Them Service
+    void addService(){
+        char check;
+        do{
+            Service newSer;
+            cout << "Name: "; string name; cin.ignore(); getline(cin,name); newSer.setNameService(name);
+            cout << "Price: "; string price; cin >> price; newSer.setPrice(price);
+            cout << "Duration: "; int duration; cin >> duration; newSer.setDuration(duration);
+            services.push_back(newSer);
             cout<<"Tiep tuc them ? (Y/N) : ";cin>>check;
         }while(check=='Y'||check=='y');
     }
