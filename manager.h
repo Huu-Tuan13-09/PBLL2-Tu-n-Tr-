@@ -10,6 +10,7 @@ private:
     vector<Service> services;
     vector<Appointment> appointments;
     string password = "haha123";
+    Schedule schedule;
 
 public:
     //Tao moi dich vu
@@ -24,13 +25,6 @@ public:
         }
     }
 
-    //Theo doi lich lam viec
-    void showSchedule(){
-        for(Barber barber : barbers){
-            vector<pair<string,vector<string>>> schedule = barber.getWorking();
-            // Trình bày tuỳ chỉnh
-        }
-    }
     //Dieu chinh lich lam viec cua tat ca cac tho
     void adjustSchedule(){
         showSchedule();

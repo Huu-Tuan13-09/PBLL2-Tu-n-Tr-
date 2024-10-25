@@ -4,6 +4,7 @@
 #include <string>
 #include "person.h"
 #include <algorithm>
+#include "schedule.h"
 
 using namespace std;
 
