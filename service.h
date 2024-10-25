@@ -7,24 +7,25 @@ private:
     static int serId;
     string serviceId;
     string nameService;
-    string price;
+    double price;
     int duration; // tính theo phút
 public:
-    Service(){}
-    Service(string ser, string pr, int est) : nameService(ser), price(pr), duration(est) {
+    Service() {
+        cin>>serId;
+        getline(cin,nameService);
+        cin>>price;
+        cin>>duration;        
         serId++;
         serviceId = "S" + to_string(serId);
     }
+    Service(string nameSer,double price, int dur) : nameService(nameSer), price(price), duration(dur), serviceId( "S" + to_string(++serId)){}
     void display(){
         cout << serviceId << ", " << nameService << ", " << price << ", " << duration;
     }
     string getServiceId(){return serviceId;}
     string getNameService(){return nameService;}
-    string getPrice(){return price;}
+    double getPrice(){return price;}
     int getDuration(){return duration;}
 
-    void setNameService(string name){nameService = name;}
-    void setPrice(string price){this->price = price;}
-    void setDuration(int duration){this->duration = duration;}
 };
 int Service::serId = 1000;

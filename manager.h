@@ -3,8 +3,6 @@
 #include "barber.h"
 #include "time.h"
 
-using namespace std;
-
 class Manager{
 private:
     vector<Customer> customers;
@@ -15,7 +13,11 @@ private:
 
 
 public:
-    
+    //Tao moi dich vu
+    void createServices(){
+        Service newSer;
+        services.push_back(newSer);
+    }
     //Xem danh sach khach hang
     void displayCustomers(){
         for(auto x:customers){
@@ -54,10 +56,30 @@ public:
     //xem lich su 
 
     //Dat lich va chon dich vu
-    void booking(string cusId, string BarId){
+    void booking(){
+        bool check=false;
+        cout<<"Nhap so dien thoai khach hang: ";
+        string number;cin>>number;
+        Customer tmp;
+        for(auto it : customers){
+            if(number==it.getPhone()){
+                it.setLoyaltyLevel(it.getLoyaltyLevel()+1);
+                check=true;
+                tmp=it;
+                break;
+            }
+        }
+        if(!check){
+            cout<<"Chua co khach hang nay! ";
+            Customer newCus(number);
+            customers.push_back(newCus);
+            tmp=newCus;
+        }
         displayServices();
-        Appointment apt;
-
+        cout<<"Nhap ten dich vu: ";
+        string nameSer;
+        getline(cin,nameSer);
+        
     }
 
     //Thay doi lich hen
@@ -72,26 +94,14 @@ public:
             cout<<"Tiep tuc them ? (Y/N) : ";cin>>check;
         }while(check=='Y'||check=='y');
     }
-    // Them Customer
-    void addCustomer(){
-        char check;
-        do{
-            Customer newCustomer;
-            cout << "Age: "; int age; cin >> age; newCustomer.setAge(age);
-            cout << "Sex: "; string sex; cin >> sex; newCustomer.setSex(sex);
-            cout << "Adress: "; string adress; cin >> adress; newCustomer.setAdress(adress);
-            customers.push_back(newCustomer);
-            cout<<"Tiep tuc them ? (Y/N) : ";cin>>check;
-        }while(check=='Y'||check=='y');
-    }
     // Them Service
     void addService(){
         char check;
         do{
-            Service newSer;
-            cout << "Name: "; string name; cin.ignore(); getline(cin,name); newSer.setNameService(name);
-            cout << "Price: "; string price; cin >> price; newSer.setPrice(price);
-            cout << "Duration: "; int duration; cin >> duration; newSer.setDuration(duration);
+            cout << "Name: "; string name; getline(cin,name);
+            cout << "Price: "; double price; cin >> price;
+            cout << "Duration: "; int duration; cin >> duration;
+            Service newSer(name,price,duration);
             services.push_back(newSer);
             cout<<"Tiep tuc them ? (Y/N) : ";cin>>check;
         }while(check=='Y'||check=='y');
