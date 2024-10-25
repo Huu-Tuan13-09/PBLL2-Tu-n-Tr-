@@ -11,7 +11,6 @@ private:
     vector<Appointment> appointments;
     string password = "haha123";
 
-
 public:
     //Tao moi dich vu
     void createServices(){
