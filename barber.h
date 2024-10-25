@@ -4,8 +4,11 @@
 #include <string>
 #include "person.h"
 #include <algorithm>
+#include "schedule.h"
 
 using namespace std;
+
+Schedule sche;
 
 class Barber : public Person{
 private:
@@ -24,10 +27,15 @@ public:
         while(true){
             pair<string,vector<string>> w;
             cout<<"Nhập ngày: "; cin>>w.first;
+            int number;
+            if(w.first=="chu nhat")number=8;
+            else number = stoi(w.first);
             cout<<"Nhập ca làm việc(các ca làm ngăn cách bởi dấu phẩy): ";string ca;cin>>ca;
             stringstream ss(ca);
             string tmp; 
             while(getline(ss,tmp,',')){
+                sche.day[number].first=tmp;
+                sche.day[number].second.first=name;
                 w.second.push_back(tmp);
             }
             vWorking.push_back(w);
@@ -41,6 +49,9 @@ public:
         string changeDay;
         cout<<"Nhập ngày cần thay đổi ca làm: ";
         cin>>changeDay;
+        int number;
+        if(number=="chu nhat")number=8;
+        else number =  stoi(changeDay);
         for(auto x:vWorking){
             if(x.first==changeDay){
                 x.second.clear();

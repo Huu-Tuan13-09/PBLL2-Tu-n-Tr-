@@ -4,6 +4,5 @@ using namespace std;
 
 class Schedule{
 public:
-    vector<pair<string,map<string,bool>>> sche[7];
-    
+    vector<map<string,pair<string,bool>>> day[8];
 };

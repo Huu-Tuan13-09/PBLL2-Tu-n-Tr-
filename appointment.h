@@ -10,7 +10,7 @@ private:
     static int apId;
     string appointmentId;
     string CustomerId;
-    string BarberId;
+    string nameBarber;
     string ServiceId;
     string status;
     Time appointmentTime;
@@ -21,12 +21,12 @@ public:
         appointmentId = "A" + to_string(apId);
 
     }
-    Appointment(string cusId, string barId, string serId, string st,string time) 
-    : appointmentId("A" + to_string(apId)), CustomerId(cusId), BarberId(barId), ServiceId(serId), status(st),time(time) {++apId;}
+    Appointment(string cusId, string nameBarber, string serId, string st,string time) 
+    : appointmentId("A" + to_string(apId)), CustomerId(cusId), nameBarber(barId), ServiceId(serId), status(st),time(time) {++apId;}
 
     string getAptId(){return appointmentId;}
     string getCusId(){return CustomerId;}
-    string getBarId(){return BarberId;}
+    string getNameBarber(){return nameBarber;}
     string getSerId(){return ServiceId;}
     string getStatus(){return status;}
 

@@ -10,7 +10,6 @@ private:
     vector<Service> services;
     vector<Appointment> appointments;
     string password;
-    
 public:
     //Tao moi dich vu
     void createServices(){
@@ -26,9 +25,15 @@ public:
 
     //Theo doi lich lam viec
     void showSchedule(){
-        for(Barber barber : barbers){
-            vector<pair<string,vector<string>>> schedule = barber.getWorking();
-            // Trình bày tuỳ chỉnh
+        for(int i=2;i<=8;i++){
+            if(i==8)cout<<"Chu nhat ";
+            else cout<<"Thu "<<i<<" ";
+            for(auto it:sche.day[i]){
+                cout<<sche.day[i].first<<"["<<sche.day[i].second.first<<"](";
+                if(!sche.day[i].second.second)cout<<"Trong)  ";
+                else cout<<"Da dat)  ";
+            }
+            cout<<endl;
         }
     }
     //Dieu chinh lich lam viec cua tat ca cac tho
@@ -78,6 +83,18 @@ public:
         cout<<"Nhap ten dich vu: ";
         string nameSer;
         getline(cin,nameSer);
+        showSchedule();
+        cout<<"Nhap thu: ";
+        string Day;
+        getline(cin,Day);
+        int number;
+        if(s=="chu nhat")number=8;
+        else number=stoi(Day);
+        cout<<"Thoi gian: ";
+        string TIME;
+        getline(cin,TIME);
+        sche.day[number].second.second=true;
+        Appointment newApp(tmp.getCustomerId,);
         
     }
 
