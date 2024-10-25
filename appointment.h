@@ -21,8 +21,11 @@ public:
         appointmentId = "A" + to_string(apId);
 
     }
-    Appointment(string cusId, string nameBarber, string serId, string st,string time) 
-    : appointmentId("A" + to_string(apId)), CustomerId(cusId), nameBarber(barId), ServiceId(serId), status(st),time(time) {++apId;}
+    Appointment(string cusId, string nameBarber, string serId,string time) 
+    : appointmentId("A" + to_string(apId)), CustomerId(cusId), nameBarber(barId), ServiceId(serId), status("Pending"),time(time) {
+        ++apId;
+
+    }
 
     string getAptId(){return appointmentId;}
     string getCusId(){return CustomerId;}

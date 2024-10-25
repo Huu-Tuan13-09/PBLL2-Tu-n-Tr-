@@ -16,10 +16,11 @@ public:
         Service newSer;
         services.push_back(newSer);
     }
+
     //Xem danh sach khach hang
     void displayCustomers(){
         for(auto x:customers){
-            cout<<x.getCustomerId()<<"         "<<x.getName()<<"\n";
+            cout<<x.getCustomerId()<<", "<<x.getName()<<", "<<x.getPhone<<", "<<x.getAge<<", "<<x.getSex<<"---"<<x.getLoyaltyLevel<<"\n";
         }
     }
 
@@ -58,7 +59,9 @@ public:
     }
 
     //xem lich su 
-
+    void view_history(){
+        
+    }
     //Dat lich va chon dich vu
     void booking(){
         bool check=false;
@@ -80,11 +83,11 @@ public:
             tmp=newCus;
         }
         displayServices();
-        cout<<"Nhap ten dich vu: ";
-        string nameSer;
-        getline(cin,nameSer);
+        cout<<"Nhap ID dich vu: ";
+        string idSer;
+        cin>>idSer;
         showSchedule();
-        cout<<"Nhap thu: ";
+        cout<<"Nhap thu ngay: ";
         string Day;
         getline(cin,Day);
         int number;
@@ -94,8 +97,8 @@ public:
         string TIME;
         getline(cin,TIME);
         sche.day[number].second.second=true;
-        Appointment newApp(tmp.getCustomerId,);
-        
+        Appointment newApp(tmp.getCustomerId,sche[number].second.first,idSer,TIME);
+        appointments.push_back(newApp);
     }
 
     //Thay doi lich hen
