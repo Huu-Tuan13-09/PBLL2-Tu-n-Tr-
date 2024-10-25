@@ -98,7 +98,7 @@ public:
         
     }
 
-    //Huy hoac thay doi lich hen
+    //Thay doi lich hen
 
     //Them Barber
     void addBaber(){
