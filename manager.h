@@ -9,9 +9,13 @@ private:
     vector<Barber> barbers;
     vector<Service> services;
     vector<Appointment> appointments;
+<<<<<<< HEAD
     string password = "haha123";
     Schedule schedule;
 
+=======
+    string password;
+>>>>>>> 99a1f7fa04c227c9a85269428eeca2e452ecc33b
 public:
     //Tao moi dich vu
     void createServices(){
@@ -25,6 +29,22 @@ public:
         }
     }
 
+<<<<<<< HEAD
+=======
+    //Theo doi lich lam viec
+    void showSchedule(){
+        for(int i=2;i<=8;i++){
+            if(i==8)cout<<"Chu nhat ";
+            else cout<<"Thu "<<i<<" ";
+            for(auto it:sche.day[i]){
+                cout<<sche.day[i].first<<"["<<sche.day[i].second.first<<"](";
+                if(!sche.day[i].second.second)cout<<"Trong)  ";
+                else cout<<"Da dat)  ";
+            }
+            cout<<endl;
+        }
+    }
+>>>>>>> 99a1f7fa04c227c9a85269428eeca2e452ecc33b
     //Dieu chinh lich lam viec cua tat ca cac tho
     void adjustSchedule(){
         showSchedule();
@@ -72,6 +92,18 @@ public:
         cout<<"Nhap ten dich vu: ";
         string nameSer;
         getline(cin,nameSer);
+        showSchedule();
+        cout<<"Nhap thu: ";
+        string Day;
+        getline(cin,Day);
+        int number;
+        if(s=="chu nhat")number=8;
+        else number=stoi(Day);
+        cout<<"Thoi gian: ";
+        string TIME;
+        getline(cin,TIME);
+        sche.day[number].second.second=true;
+        Appointment newApp(tmp.getCustomerId,);
         
     }
 
