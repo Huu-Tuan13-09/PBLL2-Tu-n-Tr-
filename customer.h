@@ -20,7 +20,10 @@ public:
         cout<<"Tuoi: ";
         cin>>age;
     }
-    void setLoyaltyLevel(int level = 1){loyaltyLevel=level;}
+    void setLoyaltyLevel(int level = 1){
+        loyaltyLevel=level;
+        if(loyaltyLevel>4)loyaltyLevel=4;
+    }
     int getLoyaltyLevel(){return loyaltyLevel;}
     string getCustomerId(){return customerId;}
     int getAge(){return age;}
