@@ -150,39 +150,6 @@ void loadAppointmentsFromFile(const string& filename, vector<Appointment>& appoi
     file.close();
 }
 
-int menu(){
-    int choice = -1;
-    while(true){
-        cout << "1. Khách hàng\n";
-        cout << "2. Thợ cắt tóc\n";
-        cout << "3. Dịch vụ\n";
-        cout << "4. Lịch hẹn\n";
-        cout << "0. Thoát!\n";
-        cout << "Chọn chức năng(0-4): ";
-        cin >> choice;
-
-        switch (choice){
-        case 1:
-            return 1;
-            break;
-        case 2:
-            return 2;
-            break;
-        case 3:
-            return 3;
-            break;
-        case 4:
-            return 4;
-            break;
-        case 0:
-            return 0;
-            break;
-        default:
-            break;
-        }
-    }
-}
-
 int menuOfCustomer(){
     int choice;
     do {
@@ -344,8 +311,40 @@ int menuOfAppointment(){
     } while (choice != 5);
 }
 
+void menu(){
+    int choice = -1;
+    while(true){
+        cout << "1. Khách hàng\n";
+        cout << "2. Thợ cắt tóc\n";
+        cout << "3. Dịch vụ\n";
+        cout << "4. Lịch hẹn\n";
+        cout << "0. Thoát!\n";
+        cout << "Chọn chức năng(0-4): ";
+        cin >> choice;
+
+        switch(choice){
+        case 1:
+            menuOfCustomer();
+            break;
+        case 2:
+            menuOfBarber();
+            break;
+        case 3:
+            menuOfService();
+            break;
+        case 4:
+            menuOfAppointment();
+            break;
+        case 0:
+            return;
+            break;
+        default:
+            break;
+        }
+    }
+}
+
 int main(){
-    Manager manager;
     int choice;
     cout << "===== Welcome to Hair Appointment Booking System ===== \n";
     while(1){
@@ -358,7 +357,8 @@ int main(){
         else break;
     }
     cout << "*** Welcome back manager! ***\n";
-    menu();
+    Manager manager;
+
 
     return 0;
 }
