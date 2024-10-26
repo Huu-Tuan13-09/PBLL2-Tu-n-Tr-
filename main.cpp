@@ -150,8 +150,215 @@ void loadAppointmentsFromFile(const string& filename, vector<Appointment>& appoi
     file.close();
 }
 
+int menu(){
+    int choice = -1;
+    while(true){
+        cout << "1. Khách hàng\n";
+        cout << "2. Thợ cắt tóc\n";
+        cout << "3. Dịch vụ\n";
+        cout << "4. Lịch hẹn\n";
+        cout << "0. Thoát!\n";
+        cout << "Chọn chức năng(0-4): ";
+        cin >> choice;
+
+        switch (choice){
+        case 1:
+            return 1;
+            break;
+        case 2:
+            return 2;
+            break;
+        case 3:
+            return 3;
+            break;
+        case 4:
+            return 4;
+            break;
+        case 0:
+            return 0;
+            break;
+        default:
+            break;
+        }
+    }
+}
+
+int menuOfCustomer(){
+    int choice;
+    do {
+        cout << "===== MENU KHÁCH HÀNG =====" << endl;
+        cout << "1. Thêm khách hàng mới" << endl;
+        cout << "2. Xem thông tin khách hàng" << endl;
+        cout << "3. Cập nhật thông tin khách hàng" << endl;
+        cout << "4. Xóa khách hàng" << endl;
+        cout << "5. Quay lại menu chính" << endl;
+        cout << "Chọn chức năng (1-5): ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Thêm khách hàng mới" << endl;
+                // Thêm mã xử lý thêm khách hàng tại đây
+                break;
+            case 2:
+                cout << "Xem thông tin khách hàng" << endl;
+                // Thêm mã xử lý xem thông tin khách hàng tại đây
+                break;
+            case 3:
+                cout << "Cập nhật thông tin khách hàng" << endl;
+                // Thêm mã xử lý cập nhật thông tin khách hàng tại đây
+                break;
+            case 4:
+                cout << "Xóa khách hàng" << endl;
+                // Thêm mã xử lý xóa khách hàng tại đây
+                break;
+            case 5:
+                cout << "Quay lại menu chính..." << endl;
+                break;
+            default:
+                cout << "Lựa chọn không hợp lệ. Vui lòng chọn lại." << endl;
+        }
+        cout << endl;
+    } while (choice != 5);
+}
+
+int menuOfBarber(){
+    int choice;
+    do {
+        cout << "===== MENU THỢ CẮT TÓC =====" << endl;
+        cout << "1. Thêm thợ cắt tóc mới" << endl;
+        cout << "2. Xem thông tin thợ cắt tóc" << endl;
+        cout << "3. Cập nhật thông tin thợ cắt tóc" << endl;
+        cout << "4. Xóa thợ cắt tóc" << endl;
+        cout << "5. Quản lý lịch làm việc của thợ" << endl;
+        cout << "6. Quay lại menu chính" << endl;
+        cout << "Chọn chức năng (1-6): ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Thêm thợ cắt tóc mới" << endl;
+                // Thêm mã xử lý thêm thợ cắt tóc tại đây
+                break;
+            case 2:
+                cout << "Xem thông tin thợ cắt tóc" << endl;
+                // Thêm mã xử lý xem thông tin thợ cắt tóc tại đây
+                break;
+            case 3:
+                cout << "Cập nhật thông tin thợ cắt tóc" << endl;
+                // Thêm mã xử lý cập nhật thông tin thợ cắt tóc tại đây
+                break;
+            case 4:
+                cout << "Xóa thợ cắt tóc" << endl;
+                // Thêm mã xử lý xóa thợ cắt tóc tại đây
+                break;
+            case 5:
+                cout << "Quản lý lịch làm việc của thợ" << endl;
+                // Thêm mã xử lý quản lý lịch làm việc của thợ tại đây
+                break;
+            case 6:
+                cout << "Quay lại menu chính..." << endl;
+                break;
+            default:
+                cout << "Lựa chọn không hợp lệ. Vui lòng chọn lại." << endl;
+        }
+        cout << endl;
+    } while (choice != 6);
+}
+
+int menuOfService(){
+    int choice;
+    do {
+        cout << "===== MENU DỊCH VỤ =====" << endl;
+        cout << "1. Thêm dịch vụ mới" << endl;
+        cout << "2. Xem danh sách dịch vụ" << endl;
+        cout << "3. Cập nhật thông tin dịch vụ" << endl;
+        cout << "4. Xóa dịch vụ" << endl;
+        cout << "5. Quay lại menu chính" << endl;
+        cout << "Chọn chức năng (1-5): ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Thêm dịch vụ mới" << endl;
+                // Thêm mã xử lý thêm dịch vụ tại đây
+                break;
+            case 2:
+                cout << "Xem danh sách dịch vụ" << endl;
+                // Thêm mã xử lý xem danh sách dịch vụ tại đây
+                break;
+            case 3:
+                cout << "Cập nhật thông tin dịch vụ" << endl;
+                // Thêm mã xử lý cập nhật thông tin dịch vụ tại đây
+                break;
+            case 4:
+                cout << "Xóa dịch vụ" << endl;
+                // Thêm mã xử lý xóa dịch vụ tại đây
+                break;
+            case 5:
+                cout << "Quay lại menu chính..." << endl;
+                break;
+            default:
+                cout << "Lựa chọn không hợp lệ. Vui lòng chọn lại." << endl;
+        }
+        cout << endl;
+    } while (choice != 5);
+}
+
+int menuOfAppointment(){
+    int choice;
+    do {
+        cout << "===== MENU LỊCH LÀM VIỆC =====" << endl;
+        cout << "1. Thêm lịch làm việc mới" << endl;
+        cout << "2. Xem lịch làm việc của thợ" << endl;
+        cout << "3. Cập nhật lịch làm việc" << endl;
+        cout << "4. Xóa lịch làm việc" << endl;
+        cout << "5. Quay lại menu chính" << endl;
+        cout << "Chọn chức năng (1-5): ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Thêm lịch làm việc mới" << endl;
+                // Thêm mã xử lý thêm lịch làm việc tại đây
+                break;
+            case 2:
+                cout << "Xem lịch làm việc của thợ" << endl;
+                // Thêm mã xử lý xem lịch làm việc của thợ tại đây
+                break;
+            case 3:
+                cout << "Cập nhật lịch làm việc" << endl;
+                // Thêm mã xử lý cập nhật lịch làm việc tại đây
+                break;
+            case 4:
+                cout << "Xóa lịch làm việc" << endl;
+                // Thêm mã xử lý xóa lịch làm việc tại đây
+                break;
+            case 5:
+                cout << "Quay lại menu chính..." << endl;
+                break;
+            default:
+                cout << "Lựa chọn không hợp lệ. Vui lòng chọn lại." << endl;
+        }
+        cout << endl;
+    } while (choice != 5);
+}
 
 int main(){
+    Manager manager;
+    int choice;
+    cout << "===== Welcome to Hair Appointment Booking System ===== \n";
+    while(1){
+        cout << "Please enter the password for manager: ";
+        string pass;
+        getline(cin, pass);
+        if(!checkPassword(pass)){
+            cout << "Wrong password!!! \nPlease re-enter: ";
+        }
+        else break;
+    }
+    cout << "*** Welcome back manager! ***\n";
+    menu();
 
     return 0;
 }
