@@ -9,14 +9,14 @@ private:
     vector<Barber> barbers;
     vector<Service> services;
     vector<Appointment> appointments;
-<<<<<<< HEAD
     string password = "haha123";
-    Schedule schedule;
 
-=======
-    string password;
->>>>>>> 99a1f7fa04c227c9a85269428eeca2e452ecc33b
 public:
+    // Kiem tra password
+    bool checkPassword(string pass){
+        return pass == password;
+    }
+
     //Tao moi dich vu
     void createServices(){
         Service newSer;
@@ -29,8 +29,6 @@ public:
         }
     }
 
-<<<<<<< HEAD
-=======
     //Theo doi lich lam viec
     void showSchedule(){
         for(int i=2;i<=8;i++){
@@ -44,7 +42,6 @@ public:
             cout<<endl;
         }
     }
->>>>>>> 99a1f7fa04c227c9a85269428eeca2e452ecc33b
     //Dieu chinh lich lam viec cua tat ca cac tho
     void adjustSchedule(){
         showSchedule();
@@ -182,6 +179,18 @@ public:
             }
         }
         return -1;
+    }
+    Customer returnCus(int i){
+        if(i != -1) return customers[i];
+    }
+    Barber returnBar(int i){
+        if(i != -1) return barbers[i];
+    }
+    Service returnSer(int i){
+        if(i != -1) return services[i];
+    }
+    Appointment returnApt(int i){
+        if(i != -1) return appointments[i];
     }
 };
 
