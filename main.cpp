@@ -1,157 +1,150 @@
-#include "manager.h"
+#include "Person/Person.cpp"
+#include "Appointment/Appointment.cpp"
+#include "Manager/Manager.cpp"
 using namespace std;
+Manager manager;
 
-void loadCustomersFromFile(const string& filename, vector<Customer>& customers) {
-    ifstream file(filename);
-    if (!file.is_open()) {
-        cerr << "Could not open the file!" << endl;
-        return;
-    }
+void menu_Custome(){
+    int choice;
+    while (true) {
+        cout << "\nCustomer Menu:\n";
+        cout << "1. Book Appointment\n";
+        cout << "2. View Customer Details\n";
+        cout << "3. Edit Customer Info\n";
+        cout << "4. View Appointment History\n";
+        cout << "5. Adjust Appointment\n";
+        cout << "6. View Barber Schedule\n";
+        cout << "7. Back to Main Menu\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
 
-    string line, name, phone, ageStr, sex, loyaltyLevelStr;
-    getline(file, line);  // Bỏ qua dòng tiêu đề
-
-    while (getline(file, line)) {
-        stringstream ss(line);
-
-        getline(ss, name, ',');
-        getline(ss, phone, ',');
-        getline(ss, ageStr, ',');
-        getline(ss, sex, ',');
-        getline(ss, loyaltyLevelStr, ',');
-
-        int age = stoi(ageStr);
-        int loyaltyLevel = stoi(loyaltyLevelStr);
-
-        // Tạo đối tượng Customer và thêm vào vector
-        customers.push_back(Customer(name, phone, age, sex, loyaltyLevel));
-    }
-
-    file.close();
-}
-
-void loadBarbersFromFile(const string& filename, vector<Barber>& barbers) {
-    ifstream file(filename);
-    if (!file.is_open()) {
-        cerr << "Could not open the file!" << endl;
-        return;
-    }
-
-    string line, name, phone, ageStr, gender, servicesOffered, experienceStr, workShifts;
-    getline(file, line);  // Bỏ qua dòng tiêu đề
-
-    while (getline(file, line)) {
-        stringstream ss(line);
-
-        getline(ss, name, ',');
-        getline(ss, phone, ',');
-        getline(ss, ageStr, ',');
-        getline(ss, gender, ',');
-        getline(ss, servicesOffered, ',');
-        getline(ss, experienceStr, ',');
-        getline(ss, workShifts, ',');
-
-        int age = stoi(ageStr);
-        int experience = stoi(experienceStr);
-
-        // Chuyển các dịch vụ thành vector<string>
-        vector<string> roles;
-        stringstream ssServices(servicesOffered);
-        string service;
-        while (getline(ssServices, service, ';')) {
-            roles.push_back(service);
+        switch (choice) {
+            case 1:
+                manager.booking();
+                break;
+            case 2:
+                //viewCustomerDetails();
+                break;
+            case 3:
+                //editCustomerInfo();
+                break;
+            case 4:
+                manager.viewHistory();
+                break;
+            case 5:
+                manager.changeApp();
+                break;
+            case 6:
+                manager.showSchedule();
+                break;
+            case 7:
+                return; // Exit the program or return to the main menu
+            default:
+                cout << "Invalid choice, please try again.\n";
+                break;
         }
+    }
+}
 
-        // Chuyển các ca làm việc thành vector<pair<string, vector<string>>>
-        vector<pair<string, vector<string>>> workingShifts;
-        stringstream ssShifts(workShifts);
-        string shift;
-        while (getline(ssShifts, shift, ';')) {
-            string day = shift.substr(1);   // Ngày làm việc (2, 3, 4,...)
-            string time = shift.substr(0, 1);  // Ca làm việc (A, B, C)
-            
-            // Kiểm tra nếu ngày đã tồn tại, thêm ca vào ngày đó
-            bool found = false;
-            for (auto &entry : workingShifts) {
-                if (entry.first == day) {
-                    entry.second.push_back(time);
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) {
-                workingShifts.push_back({day, {time}});
-            }
+void menu_Manage() {
+    int choice;
+    while (true) {
+        cout << "\nManager Menu:\n";
+        cout << "1. Add Barber\n";
+        cout << "2. Remove Barber\n";
+        cout << "3. Add Service\n";
+        cout << "4. Remove Service\n";
+        cout << "5. Delete Customer\n";
+        cout << "6. View Customer List\n";
+        cout << "7. View Barber List\n";
+        cout << "8. View Service List\n";
+        cout << "9. View Barber Schedule\n";
+        cout << "10. Adjust Barber Schedule\n";
+        cout << "11. Back to Main Menu\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        string Id;
+        switch (choice) {
+            case 1:
+                manager.addBarber();
+                break;
+            case 2:
+                cout << "Enter ID of Barber: "; cin >> Id;
+                manager.cancelBarber(Id);
+                break;
+            case 3:
+                manager.addService();
+                break;
+            case 4:
+                cout << "Enter ID of Service: "; cin >> Id;
+                manager.cancelService(Id);
+                break;
+            case 5:
+                cout << "Enter ID of Customer: "; cin >> Id;
+                manager.cancelCustomer(Id);
+                break;
+            case 6:
+                manager.displayCustomers();
+                break;
+            case 7:
+                manager.displayBarbers();
+                break;
+            case 8:
+                manager.displayServices();
+                break;
+            case 9:
+                manager.showSchedule();
+                break;
+            case 10:
+                manager.adjustSchedule();
+                break;
+            case 11:
+                return;  // Exit and return to the main menu
+            default:
+                cout << "Invalid choice. Please try again.\n";
         }
-
-        // Tạo đối tượng Barber và thêm vào vector
-        barbers.push_back(Barber(name, phone, roles, experience, workingShifts));
     }
-
-    file.close();
 }
 
-void loadServicesFromFile(const string& filename, vector<Service>& services) {
-    ifstream file(filename);
-    if (!file.is_open()) {
-        cerr << "Could not open the file!" << endl;
-        return;
+void menu(){
+    int choice = -1;
+    while(true){
+        cout << "1. Custome\n";
+        cout << "2. Manage\n";
+        cout << "0. Exit\n";
+        cout << "Chọn chức năng(0-2): ";
+        cin >> choice;
+
+        switch(choice){
+        case 1:
+            menu_Custome();
+            break;
+        case 2:
+            menu_Manage();
+            break;
+        case 0:
+            return;
+            break;
+        default:
+            break;
+        }
     }
-
-    string line, nameService, priceStr, durationStr;
-    getline(file, line);  // Bỏ qua dòng tiêu đề
-
-    while (getline(file, line)) {
-        stringstream ss(line);
-
-        getline(ss, nameService, ',');
-        getline(ss, priceStr, ',');
-        getline(ss, durationStr, ',');
-
-        double price = stod(priceStr);
-        int duration = stoi(durationStr);
-
-        // Tạo đối tượng Service và thêm vào vector
-        services.push_back(Service(nameService, price, duration));
-    }
-
-    file.close();
 }
-
-void loadAppointmentsFromFile(const string& filename, vector<Appointment>& appointments) {
-    ifstream file(filename);
-    if (!file.is_open()) {
-        cerr << "Could not open the file!" << endl;
-        return;
-    }
-
-    string line, bookingTime, appointmentTime, customerName, serviceName, barberName, status;
-    getline(file, line);  // Bỏ qua dòng tiêu đề
-
-    while (getline(file, line)) {
-        stringstream ss(line);
-
-        getline(ss, bookingTime, ',');
-        getline(ss, appointmentTime, ',');
-        getline(ss, customerName, ',');
-        getline(ss, serviceName, ',');
-        getline(ss, barberName, ',');
-        getline(ss, status, ',');
-
-        // Ở đây cần ánh xạ customerName, barberName, serviceName sang CustomerId, BarberId, ServiceId
-        string customerId = getCustomerIdByName(customerName);  // Hàm giả định để lấy ID khách hàng
-        string barberId = getBarberIdByName(barberName);        // Hàm giả định để lấy ID thợ cắt tóc
-        string serviceId = getServiceIdByName(serviceName);      // Hàm giả định để lấy ID dịch vụ
-
-        // Tạo đối tượng Appointment và thêm vào vector
-        appointments.push_back(Appointment(customerId, barberId, serviceId, status, appointmentTime));
-    }
-
-    file.close();
-}
-
 
 int main(){
-
+    string s;
+    cout<<"NHAP PASSWORD: ";
+    while(cin>>s){
+        if(manager.checkPass(s))break;
+        else cout<<"VUI LONG NHAP LAI! : ";
+    }
+    manager.createServices();
+    manager.createBarber();
+    // manager.displayBarbers();
+    // manager.booking();
+    // manager.booking();
+    // manager.displayCustomers();
+    menu();
     return 0;
 }
