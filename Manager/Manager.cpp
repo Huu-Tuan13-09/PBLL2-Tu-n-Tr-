@@ -334,13 +334,20 @@
         while(getline(cin,TIME)){
             if(sche.scheduled[TIME]>=4){
                 cout<<"DA QUA NHIEU LICH CHO THOI GIAN NAY!\nCHON THOI GIAN KHAC: ";
-            }else break;
+            }
+            else {
+                string subTime=TIME.substr(TIME.find(" ")+1);
+                if(subTime>="07:00"&&subTime<="20:30")break;
+                else {
+                    cout<<"CHI CO THE DAT LICH HEN TRONG KHOANG THOI GIAN (07:00-20:30) \nVUI LONG NHAP LAI: ";
+                }
+            }
         }
         sche.scheduled[TIME]+=1;
         Appointment newApp(tmp.getCustomerId(),idSer,TIME);
         appointments.push_back(newApp);
         cout<<string(65,'-')<<endl;
-        cout<<"          DA DAT LICH HEN THANH CONG!\n";
+        cout<<string(10,' ')<<"DA DAT LICH HEN THANH CONG!\n";
     }
     //Thay doi lich hen
     void Manager::changeApp(){
@@ -411,7 +418,7 @@
             if(services[i].getServiceId() == Id){
                 services.erase(services.begin()+i);
                 cout<<"DA XOA DICH VU THANH CONG!"<<endl;
-                return;
+                return ;
             }
         }
         cout<<"DICH VU KHONG TON TAI!"<<endl;
