@@ -131,7 +131,7 @@ void menu_Manage(Manager& manager) {
     }
 }
 
-void menu(Manager& manager){
+void processing(Manager& manager){
     int choice = -1;
     while(true){
         cout << "1. QUAN LY KHACH HANG\n";
@@ -159,6 +159,6 @@ void menu(Manager& manager){
 int main(){
     Manager manager;
     login(manager);
-    menu(manager);
+    processing(manager);
     return 0;
 }
